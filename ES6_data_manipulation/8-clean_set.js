@@ -1,11 +1,8 @@
 export default function cleanSet(set, startString) {
-  if (
-    !set &&
-    !startString &&
-    !(set instanceof Set) &&
+  if (!set && !startString && !(set instanceof Set) &&
     typeof startString !== 'string'
   ) {
-    return "";
+    return '';
   }
 
   const parts = [];
