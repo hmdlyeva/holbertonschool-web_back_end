@@ -36,6 +36,8 @@ class Server:
             return self.__dataset[i[0]:i[1]]
 
 
-index_range = __import__('0-simple-helper_function').index_range
-
-index_range()
+def index_range(page: int, page_size: int) -> Tuple[int, int]:
+    """index range"""
+    index = page * page_size - page_size
+    index_1 = index + page_size
+    return (index, index_1)
